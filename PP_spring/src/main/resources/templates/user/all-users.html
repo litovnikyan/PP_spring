@@ -20,8 +20,14 @@
         <td th:text="${user.age}"></td>
         <td th:text="${user.city}"></td>
         <td>
-            <a th:href="@{user/updateUser(id=${user.id})}">Update</a>
-            <a th:href="@{user/deleteUser(id=${user.id})}">Delete</a>
+            <form th:action="@{/user/updateUser}" th:method="GET">
+                <input type="hidden" name="id" th:value="${user.getId()}">
+                <button type="submit">Изменить</button>
+            </form>
+            <form th:action="@{/user/deleteUser}" th:method="POST">
+                <input type="hidden" name="id" th:value="${user.getId()}">
+                <button type="submit">Удалить</button>
+            </form>
         </td>
     </tr>
 

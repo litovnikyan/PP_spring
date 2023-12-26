@@ -2,9 +2,9 @@ package com.springcource.pp_2_3.model;
 
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
 
@@ -18,7 +18,7 @@ public class User {
     @Column(name = "name")
     private String name;
     @Column(name = "surname")
-    private String surName;
+    private String surname;
     @Column(name = "age")
     private int age;
     @Column(name = "city")
@@ -29,7 +29,7 @@ public class User {
 
     public User(String name, String surName, int age, String city) {
         this.name = name;
-        this.surName = surName;
+        this.surname = surName;
         this.age = age;
         this.city = city;
     }
@@ -50,12 +50,12 @@ public class User {
         this.name = name;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getAge() {
@@ -79,7 +79,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
+                ", surName='" + surname + '\'' +
                 ", age=" + age +
                 ", city='" + city + '\'' +
                 '}';

@@ -5,12 +5,14 @@ import com.springcource.pp_2_3.model.User;
 import java.util.List;
 
 public interface UserService {
-    public List<User> getAllUsers();
+    List<User> getAllUsers();
 
-    public void saveUser(User user);
+    void saveUser(User user);
 
-    public User getUser(int id);
+    void persistUser(User user);
 
-    public void removeUser(int id);
+    User getUser(int id);
+
+    void removeUser(int id);
 
 }
